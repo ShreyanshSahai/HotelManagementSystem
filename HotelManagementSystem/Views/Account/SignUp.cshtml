@@ -1,0 +1,69 @@
+﻿@model UserSignUpModel
+@{
+    ViewBag.Title = "Sign Up";
+}
+
+<div class="container my-auto mb-auto mx-auto">
+    <span asp-validation-summery="All" class="text-danger"></span>
+    <div class="title">Registration</div>
+    <div class="content">
+      <form asp-action="SignUp" asp-controller="Account" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details font-weight-bold">Full Name</span>
+            <input type="text" placeholder="Enter your name" asp-for="Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <span class="details font-weight-bold">Username</span>
+            <input type="text" placeholder="Enter your username" asp-for="Username">
+            <span asp-validation-for="Username" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <span class="details font-weight-bold">Email</span>
+            <input type="text" placeholder="Enter your email" asp-for="Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <span class="details font-weight-bold">Phone Number</span>
+            <input type="text" placeholder="Enter your number" asp-for="MobileNumber">
+            <span asp-validation-for="MobileNumber" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <span class="details font-weight-bold">Password</span>
+            <input type="password" placeholder="Enter your password" asp-for="Password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+          </div>
+          <div class="input-box">
+            <span class="details font-weight-bold">IdProof (Adhaar Number)</span>
+            <input type="text" placeholder="Enter your Id Proof" asp-for="IdProof">
+            <span asp-validation-for="IdProof" class="text-danger"></span>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" value="Male" name="gender" id="dot-1" asp-for="Gender" hidden>
+          <input type="radio" value="Female" name="gender" id="dot-2" asp-for="Gender" hidden>
+          <input type="radio" value="Prefer not to say" name="gender" id="dot-3" asp-for="Gender" hidden>
+          <span class="gender-title font-weight-bold">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>

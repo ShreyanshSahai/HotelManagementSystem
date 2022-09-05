@@ -1,0 +1,39 @@
+﻿@model UserLogInModel
+@{
+    ViewData["Title"]="Login";
+}
+
+<div class="container my-5 main_box" style="width:400px; height:450px; border:dotted black 1px; border-radius:15px;">
+    <div class="container" style="display:flex; justify-content:center; font-size:28px; font-family:'DynaPuff', cursive; margin-top:17px">Log In</div>
+    @using (Html.BeginForm("Login", "Account", method:FormMethod.Post))
+    {
+        <div class="container my-3">
+            <span asp-validation-summery="All" class="text-danger"></span>
+            <div class="form-group form-check-label my-2">
+                <div><label style="margin-bottom:5px; font-family: 'Ubuntu', sans-serif; font-weight:bold; letter-spacing:1px;" asp-for="Username">Username</label></div>
+                <input style="border-radius:13px; font-family: 'Ubuntu', sans-serif;" class="form-control " type="text" asp-for="Username" />
+                <span class="text-danger" asp-validation-for="Username"></span>
+            </div>
+            <div class="form-group form-check-label my-2">
+                <div><label style="margin-bottom:5px; margin-top:15px; font-family: 'Ubuntu', sans-serif; font-weight:bold; letter-spacing:1px;" asp-for="Password">Password</label></div>
+                <input style="border-radius:13px" class="form-control" type="password" asp-for="Password" />
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+            <div class="form-group form-check-label my-1 mx-2">
+                <label style="margin-bottom:5px; margin-top:15px; font-family: 'Ubuntu', sans-serif; font-weight:bold" asp-for="RememberMe">Remember me</label>
+                <input type="checkbox" asp-for="RememberMe"/>
+            </div>
+            <button class="btn my-3" style="margin-bottom:12px; margin-top:10px;height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                background: linear-gradient(135deg, #71b7e6, #9b59b6);" type="submit">Login</button>
+        </div>
+    }
+</div>
