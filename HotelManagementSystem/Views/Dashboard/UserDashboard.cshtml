@@ -1,0 +1,39 @@
+﻿@model User
+@{
+    ViewBag.Title = "User Dashboard";
+}
+
+<h1 class="mx-4">Welcome, @Model.Name</h1>
+<table class="table mx-4">
+    <tbody>
+        <tr>
+            <th scope="row">Mobile:</th>
+            @if (!@Model.PhoneNumberConfirmed)
+            {
+                <td>@Model.PhoneNumber <a class="link-danger" href="#">Verify</a></td>
+            }
+            else
+            {
+                <td>@Model.PhoneNumber <div class="link-success">Verified</div></td>
+            }
+        </tr>
+        <tr>
+            <th scope="row">Email:</th>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <th scope="row">Username:</th>
+            <td>@Model.UserName</td>
+        </tr>
+        <tr>
+            <th scope="row">Id Proof:</th>
+            <td>@Model.IdProof</td>
+        </tr>
+        <tr>
+            <th scope="row">Gender:</th>
+            <td>@Model.Gender</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary mx-4" asp-action="History" asp-controller="Booking">History</button>
+<button class="btn btn-primary" asp-action="BookRoom" asp-controller="Booking">Book Room</button>

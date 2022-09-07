@@ -1,0 +1,42 @@
+﻿@model Room
+@{
+    ViewBag.Title = "Edit Room";
+}
+
+<div class="container my-5" style="width:450px; border: solid 1px black; border-radius:15px">
+    <label style="font-size:large; font-weight:bold; font-family: 'Exo 2', sans-serif;">Edit Room</label>
+    <hr />
+    <div>
+        <form method="post" asp-action="EditRoom" asp-controller="Dashboard" class="my-3">
+            <div class="form-group my-2">
+                <label class="my-3" asp-for="RoomName">Room Name: </label>
+                <input asp-for="RoomName" class="form-control" vvalue=@Model.RoomName readonly/>
+                <span asp-validation-for="RoomName" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <label class="my-3" asp-for="Capacity">Capacity: </label>
+                <input type="number" asp-for="Capacity" class="form-control" />
+                <span asp-validation-for="Capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group my-2">
+                <label class="my-3" asp-for="Fair">Fair: </label>
+                <input asp-for="Fair" class="form-control" />
+                <span asp-validation-for="Fair" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label class="mr-4" asp-for="Type">Type: </label>
+                <select asp-for="Type">
+                    <option value="AC">AC</option>
+                    <option value="Non-AC" selected>Non - AC</option>
+                </select>
+            </div>
+            <div class="form-group my-2">
+                <label asp-for="IsBooked" style="margin-right: 5px">
+                    Booked? 
+                </label>
+                <input type="checkbox" asp-for="IsBooked" />
+            </div>
+            <button class="btn my-3 btn-primary" type="submit">Edit Room</button>
+        </form>
+    </div>
+</div>

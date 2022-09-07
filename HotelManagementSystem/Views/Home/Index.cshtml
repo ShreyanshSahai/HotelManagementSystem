@@ -1,11 +1,10 @@
-﻿@inject SignInManager<User> signInManager;
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
-    ViewBag.Message = signInManager.IsSignedIn(User);
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <p>@ViewBag.Message</p>
+<div class="text-center" style="background: linear-gradient(to right, #E0BC51, #BE7934,#5D7DDD)">
+    
+    <h1 class="display-4" style="font-family: 'Exo 2', sans-serif;">Welcome to the Hotel King</h1>
+    <h3 class="" style="font-family: 'Poppins',sans-serif;font-weight:300">The king of all hotels.</h3>
+    <img src="~/Images/img-1.jpg" style="align-content:center; width:100%; height:100%"/>
 </div>
