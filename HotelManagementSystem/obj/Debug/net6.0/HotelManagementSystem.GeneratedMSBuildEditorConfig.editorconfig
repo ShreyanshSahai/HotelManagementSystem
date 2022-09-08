@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Booking/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Booking/TimeSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xUaW1lU2VsZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Dashboard/AddRoom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEFkZFJvb20uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -29,6 +37,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Dashboard/EditRoom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRSb29tLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Dashboard/History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Dashboard/UserDashboard.cshtml]
@@ -49,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sahai/Desktop/Task Alloted/HotelManagementSystem/HotelManagementSystem/Views/Shared/Error.cshtml]

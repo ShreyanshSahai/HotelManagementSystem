@@ -8,27 +8,28 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th class="my-1" scope="col">Room Name</th>
-                <th class="my-1" scope="col">Capacity</th>
-                <th class="my-1" scope="col">Type</th>
-                <th class="my-1" scope="col">Fair</th>
-                <th class="my-1" scope="col">Booked or not</th>
-                <th class="my-1" scope="col">Edit</th>
+                <th class="my-1">Room Name</th>
+                <th class="my-1">Capacity</th>
+                <th class="my-1">Type</th>
+                <th class="my-1">Fair</th>
+                <th class="my-1">Booked or not</th>
+                <th class="my-1">Edit</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            
                 @foreach(Room room in Model)
                 {
+                    <tr>
                     <td>@room.RoomName</td>
                     <td>@room.Capacity</td>
                     <td>@room.Type</td>
                     <td>@room.Fair</td>
                     <td>@room.IsBooked</td>
                     <td>@Html.ActionLink("Edit", "EditRoom", "Dashboard", new {RoomName=room.RoomName})</td>
+                    </tr>
 
                 }
-            </tr>
         </tbody>
     </table>
     <div>

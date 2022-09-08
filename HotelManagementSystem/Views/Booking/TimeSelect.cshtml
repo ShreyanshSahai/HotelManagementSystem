@@ -1,0 +1,24 @@
+﻿@model Order
+@{
+    ViewBag.Title = "Select Duration";
+}
+
+<div class="container my-5" style="width:450px; border: solid 1px black; border-radius:15px">
+    <label style="font-size:large; font-weight:bold; font-family: 'Exo 2', sans-serif;">Select Time</label>
+    <hr />
+    <form asp-action="TimeSelect" asp-controller="Booking" method="post" class="my-3">
+        <div class="form-group">
+            <label class="my-3" asp-for="RoomName">Room : </label>
+            <input asp-for="RoomName" value=@Model.RoomName class="form-control" readonly/>
+        </div>
+        <div class="form-group">
+            <label class="my-3" asp-for="CheckIn">Check In Time</label>
+            <input asp-for="CheckIn" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label class="my-3" asp-for="CheckOut">Check Out Time</label>
+            <input asp-for="CheckOut" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary my-3">Book</button>
+    </form>
+</div>

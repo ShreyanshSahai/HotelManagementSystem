@@ -11,7 +11,7 @@ namespace HotelManagementSystem.Controllers
         private readonly HotelDbContext db;
         
 
-        public HomeController(ILogger<HomeController> logger, HotelDbContext db, UserManager<User> userManager, SignInManager<User> signInManager)
+        public HomeController(ILogger<HomeController> logger, HotelDbContext db)
         {
 
             _logger = logger;

@@ -64,7 +64,14 @@ namespace HotelManagementSystem.Controllers
             var result = await signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                if(model.Username.Equals("Admin@hotelking"))
+                {
+                    return RedirectToAction("AdminDashboard", "Dashboard");
+                }
+                else
+                {
+                    return RedirectToAction("UserDashboard", "Dashboard");
+                }
             }
             else
             {

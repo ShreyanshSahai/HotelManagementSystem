@@ -1,0 +1,35 @@
+﻿@model List<Room>
+
+@{
+    ViewData["Title"] = "Book Room";
+}
+
+<div class="mx-4">Click book to book the room</div>
+<div class="container mx-5 my-3" style="font-family: 'Poppins',sans-serif;">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th class="my-1" scope="col">Room Name</th>
+                <th class="my-1" scope="col">Capacity</th>
+                <th class="my-1" scope="col">Type</th>
+                <th class="my-1" scope="col">Fair</th>
+                <th class="my-1" scope="col">Booked or not</th>
+                <th class="my-1" scope="col">Book</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach(Room room in Model)
+                {
+                    <td>@room.RoomName</td>
+                    <td>@room.Capacity</td>
+                    <td>@room.Type</td>
+                    <td>@room.Fair</td>
+                    <td>@room.IsBooked</td>
+                    <td>@Html.ActionLink("Book", "RoomSelect", "Booking", new {RoomName=room.RoomName})</td>
+
+                }
+            </tr>
+        </tbody>
+    </table>
+</div>

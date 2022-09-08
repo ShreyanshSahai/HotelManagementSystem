@@ -1,0 +1,33 @@
+﻿@model List<Order>
+
+@{
+    ViewBag.Title = "History";
+}
+
+<div class="container">
+    <h2>History</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th class="my-1" scope="col">Order Id</th>
+                <th class="my-1" scope="col">Check In</th>
+                <th class="my-1" scope="col">Check Out</th>
+                <th class="my-1" scope="col">Room Booked</th>
+                <th class="my-1" scope="col">Fair</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (Order order in Model)
+                {
+                    <td>@order.OrderId</td>
+                    <td>@order.CheckIn</td>
+                    <td>@order.CheckOut</td>
+                    <td>@order.RoomName</td>
+                    <td>@order.TotalFair</td>
+                }
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" asp-action="Book" asp-controller="Booking">Book New</a>
+</div>

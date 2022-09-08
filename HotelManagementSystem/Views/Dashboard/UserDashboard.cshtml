@@ -18,8 +18,16 @@
             }
         </tr>
         <tr>
-            <th scope="row">Email:</th>
-            <td>@Model.Email</td>
+            @if(@Model.EmailConfirmed) 
+            {
+                <th scope="row">Email:</th>
+                <td>@Model.Email <a href="#" class="link-success">Verified</a></td>
+            }
+            else
+            {
+                <th scope="row">Email:</th>
+                <td>@Model.Email <a href="#" class="link-danger">Verfify</a></td>
+            }
         </tr>
         <tr>
             <th scope="row">Username:</th>
@@ -35,5 +43,5 @@
         </tr>
     </tbody>
 </table>
-<button class="btn btn-primary mx-4" asp-action="History" asp-controller="Booking">History</button>
-<button class="btn btn-primary" asp-action="BookRoom" asp-controller="Booking">Book Room</button>
+<a class="btn btn-primary mx-4" asp-action="History" asp-controller="Dashboard">History</a>
+<a class="btn btn-primary" asp-action="Book" asp-controller="Booking">Book Room</a>
